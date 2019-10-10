@@ -1,0 +1,23 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "CV Artem Kovalchuk",
+  "main": "gulpfile.js",
+  "scripts": {
+    "watch": "gulp",
+    "pdf": "html-pdf src/index.html pdf/cv_artem_kocalchuk.pdf"
+  },
+  "keywords": [
+    "cv",
+    "resume"
+  ],
+  "author": "Artem Kovalchuk",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "html-pdf": "^2.2.0"
+  }
+}
