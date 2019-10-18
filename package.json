@@ -2,10 +2,10 @@
   "name": "cv",
   "version": "1.0.0",
   "description": "CV Artem Kovalchuk",
-  "main": "gulpfile.js",
+  "main": "src/entry.js",
   "scripts": {
-    "watch": "gulp",
-    "pdf": "html-pdf src/index.html pdf/cv_artem_kocalchuk.pdf"
+    "build": "webpack",
+    "dev": "webpack-dev-server --open"
   },
   "keywords": [
     "cv",
@@ -14,10 +14,22 @@
   "author": "Artem Kovalchuk",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2",
-    "html-pdf": "^2.2.0"
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.2.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  },
+  "dependencies": {
+    "typed.js": "^2.0.11"
   }
 }

@@ -1,0 +1,276 @@
+@import "variables";
+
+$main-color: #3a996c;
+
+*, *:after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: $main-color;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  line-height: 140%;
+  background: #e5e9e9;
+  -webkit-print-color-adjust: exact;
+}
+
+.name {
+  font-size: 2.32rem;
+  letter-spacing: 0.03em;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+  line-height: 130%;
+}
+
+.goal {
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  letter-spacing: 0.03em;
+  margin-top: 12px;
+  margin-bottom: 0;
+  background: #e5e9e9;
+  font-family: monospace;
+}
+
+// MY PHOTO
+// ---------------
+.my-photo {
+  display: block;
+  height: 180px;
+  margin-left: auto;
+  border-radius: 1%;
+}
+
+span.highlight {
+  font-weight: 500;
+  border-bottom: 1px dotted black;
+}
+
+section.highlight {
+  position: relative;
+}
+section.highlight:before {
+  position: absolute;
+  content: '';
+  left: -55px; // TODO make it more flexible
+  height: 100%;
+  width: 8px;
+  //background: grey;
+  background: $main-color;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+// CONTACT
+// ---------------
+.contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    padding: 4px;
+
+    img {
+      width: 20px;
+    }
+  }
+  &__info {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    a {
+      color: black;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// SECTION
+// ---------------
+.section {
+  margin-top: 35px;
+  font-size: 1rem;
+
+  &__title {
+    font-size: 1.65rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 1rem;
+
+      &:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 6px;
+        height: 8px;
+        width: 8px;
+        display: block;
+        background-image: url("../images/list-item-icon.svg");
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+// PROJECT
+// ---------------
+.project {
+  &__title {
+    margin-bottom: 0.3rem;
+
+    > * {
+      display: inline-block;
+      color: black;
+    }
+
+    h2, h3, h4 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    a {
+      color: black;
+    }
+  }
+
+  &__date {
+    color: #4b4b4b;
+    margin-left: 6px;
+  }
+
+  &__description {
+    font-size: 1rem;
+
+    a {
+      color: black;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px dotted black;
+      &:hover {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+
+  &__tags {
+    margin-top: 0.5rem;
+  }
+
+  &__tag {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 1px 10px;
+    color: white;
+    background: $main-color;
+    margin-right: 3px;
+    margin-bottom: 6px;
+  }
+}
+
+.button {
+  $color: #444444;
+  display: inline-block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: $color;
+  border: 1px solid $color;
+  margin-top: 1rem;
+  margin-right: 0.6rem;
+
+  &:hover {
+    background: lighten($color, 65%);
+    color: black;
+  }
+
+  &:active {
+    background: $color;
+    color: white;
+  }
+
+  &--primary {
+    $color: $main-color;
+    color: white;
+    background: $color;
+    border-color: transparent;
+
+    &:hover {
+      background: darken($color, 5%);
+      color: white;
+    }
+
+    &:active {
+      background: darken($color, 10%);
+      color: white;
+    }
+  }
+}
+
+// MEDIA QUERIES
+// ---------------
+@media print {
+  .non-printable {
+    display: none !important;
+  }
+}
+
+@media not print {
+  .only-printable {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: $screen-md-min) {
+  html {
+    font-size: 18px;
+  }
+  .my-photo {
+    width: 100%;
+    margin-top: 20px;
+    height: auto !important;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .main-section {
+    padding-right: 30px;
+  }
+}
+
+@media print {
+  .project__title {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .goal {
+    font-family: Roboto, sans-serif;
+  }
+}

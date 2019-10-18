@@ -1,16 +1,209 @@
+<!--
+Hi! It's my CV.
+This page was developed to be printed or saved as pdf.
+It contains data hidden from search engines.
+---
+To hide data I use custom data-attributes and base64 encoder to encode/decode data.
+-->
+
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CV Artem Kovalchuk</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+    <title>Artem Kovalchuk - Front-End Developer Curriculum Vitae</title>
+    <meta name="description" content="Front-End Developer Curriculum Vitae. React Developer from Ukraine. HIRE ME!">
+    <meta name="keywords" content="CV, Curriculum Vitae, Developer, Front-End, React, JavaScript, ES5, ES2015">
+    <meta name="author" content="Artem Kovalchuk">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCE1BN4CE3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MCE1BN4CE3');
+    </script>
 </head>
 <body>
     <div class="page">
-
+        <!-- Name, Job, Contact info and My photo-->
+        <div class="row">
+            <!-- Name, Job and Contact info -->
+            <div class="col-xs-12 col-md-8">
+                <h1 class="name">ARTEM KOVALCHUK</h1>
+<!--                <h2 class="goal"><b>Job goal: </b>Junior Front-End Developer</h2>-->
+                <h2 class="goal non-printable">
+                    > <span id="goal"></span>
+                    <noscript>Front-End Developer</noscript>
+                </h2>
+                <h2 class="goal only-printable">
+                    <b>Objective: </b>Front-End Developer
+                </h2>
+                <section class="contact-info">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 ">
+                            <div class="contact">
+                                <div class="contact__icon"><img src="images/email-icon.svg" alt="email icon"></div>
+                                <div class="contact__info">
+                                    <a id="email" href="#" title="Hidden from search engines"
+                                       data-encoded-href="bWFpbHRvOiBrb3ZhcnQuZGV2QGdtYWlsLmNvbQ=="
+                                       data-encoded-value="a292YXJ0LmRldkBnbWFpbC5jb20=">
+                                        click to show
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="contact">
+                                <div class="contact__icon"><img src="images/linkedin-icon.svg" alt="linkedin icon"></div>
+                                <div class="contact__info"><a href="https://linkedin.com/in/kovart" target="_blank">linkedin.com/in/kovart</a></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="contact">
+                                <div class="contact__icon"><img src="images/github-icon.svg" alt="github icon"></div>
+                                <div class="contact__info"><a href="https://github.com/kovart" target="_blank">github.com/kovart</a></div>
+                            </div>
+                            <div class="contact">
+                                <div class="contact__icon"><img src="images/phone-icon.svg" alt="phone icon"></div>
+                                <div class="contact__info">
+                                    <a href="#" id="phone" title="Hidden from search engines"
+                                       data-encoded-href="dGVsOiszODA5NjU4MTUzNDk="
+                                       data-encoded-value="KzM4MDk2NTgxNTM0OQ==">
+                                        click to show
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Photo -->
+            <div class="col-xs-12 col-md-4">
+                <img class="my-photo" src="images/photo.jpg" alt="My photo">
+            </div>
+        </div>
+        <div class="row non-printable">
+            <div class="col-xs-12">
+                <a class="button button--primary" id="contact-me"
+                   data-encoded-href="bWFpbHRvOiBrb3ZhcnQuZGV2QGdtYWlsLmNvbQ=="
+                   href="#">
+                    CONTACT ME
+                </a>
+                <a class="button" href="#" id="download-cv"
+                   data-encoded-href="cGRmL2N2X2FydGVtX2tvdmFsY2h1ay5wZGY="
+                   download>Download CV</a>
+            </div>
+        </div>
+        <!-- About me -->
+        <div class="row">
+            <div class="col-xs-12">
+                <section class="section highlight" style="line-height: 150%">
+                    Creative and self-starting Front-End Developer with 4+ years of programming experience. <br>
+                    Highly skilled in React/Redux and have a deep understanding of OOP and Design Patterns.
+                    Interested in becoming part of a friendly team that wants to grow and create great applications.
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Skills and Projects -->
+            <div class="col-xs-12 col-md-8 main-section">
+                <section class="section">
+                    <h3 class="section__title">Skills</h3>
+                    <div class="section__body">
+                        JavaScript, TypeScript, React, Redux, Redux-thunk, HTML5, CSS3, SASS, BEM, Node.js, Express.js, Mongoose,
+                        AJAX, REST API, WebSockets, OOP, Design Patterns, Gulp, Webpack, C#/.NET, Git, Figma, Adobe Photoshop
+                    </div>
+                </section>
+                <section class="section">
+                    <h3 class="section__title">Projects</h3>
+                    <div class="section__body">
+                        <ul>
+                            <li>
+                                <div class="project">
+                                    <div class="project__title">
+                                        <h4 title="Private repository">PracticeChat</h4>
+                                        <span class="project__date">[under development]</span>
+                                    </div>
+                                    <div class="project__description">
+                                        Online chat for learning English. A real-world full-stack project
+                                        with REST API and WebSockets that uses JWT-authentication.
+                                        The Front-End part is written by using React Hooks, Redux and Redux Middlewares.
+                                    </div>
+                                    <div class="project__tags">
+                                        <span class="project__tag">React</span>
+                                        <span class="project__tag">Redux</span>
+                                        <span class="project__tag">Node.js</span>
+                                        <span class="project__tag">Express.js</span>
+                                        <span class="project__tag">MongoDB</span>
+                                        <span class="project__tag">Socket.IO</span>
+                                        <span class="project__tag">SASS</span>
+                                        <span class="project__tag">Webpack</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="project">
+                                    <div class="project__title">
+                                        <h4><a href="https://github.com/kovart/sticksy">Sticksy.js</a></h4>
+                                        <span class="project__date">[2019 – present]</span>
+                                    </div>
+                                    <div class="project__description">
+                                        Open-Source library for making a <a href="https://sticksy.js.org" title="Project page with demos" class="highlight">“sticky widget”</a> behavior.
+                                        Here you can see my algorithmic and programming skills in vanilla JavaScript.
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="project">
+                                    <div class="project__title">
+                                        <h4><a href="https://www.youtube.com/watch?v=25tl0TEJaBY" target="_blank">FontNinja</a></h4>
+                                        <span class="project__date">[2017 – 2018]</span>
+                                    </div>
+                                    <div class="project__description">
+                                        Font-organizer for Adobe After Effects with search, filter, sorting, tagging system, real-time preview,
+                                        virtual-scrolling, and many other features.
+                                        Used <span class="highlight" title="Design Principe">Inversion of Control</span> to build for different environments.
+                                    </div>
+                                    <div class="project__tags">
+                                        <span class="project__tag">TypeScript</span>
+                                        <span class="project__tag">Vue</span>
+                                        <span class="project__tag" title="A library for Flux-like state management">Vuex</span>
+                                        <span class="project__tag" title="A library for Inversion Of Control">Inversify.js</span>
+                                        <span class="project__tag">SASS</span>
+                                        <span class="project__tag" title="SDK/API for Adobe products">Adobe CEP</span>
+                                        <span class="project__tag">Webpack</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <!-- Education, Interests and Languages -->
+            <div class="col-xs-12 col-md-4">
+                <section class="section">
+                    <h3 class="section__title">Education</h3>
+                    <div class="section__body">
+                        <b style="font-weight: 500">Master of Computer Science</b>,
+                        Donetsk National University, Vinnytsia, 2017 – 2019
+                    </div>
+                </section>
+                <section class="section">
+                    <h3 class="section__title">Interests</h3>
+                    <div class="section__body">
+                        Machine Learning, UX/UI Design, Graphic Design, Product Design, Branding, Music production.
+                    </div>
+                </section>
+                <section class="section">
+                    <h3 class="section__title">Languages</h3>
+                    <div class="section__body">
+                        English – Pre-Intermediate
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
 </body>
 </html>
