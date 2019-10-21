@@ -1,6 +1,6 @@
 {
   "name": "cv",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "CV Artem Kovalchuk",
   "main": "src/entry.js",
   "scripts": {

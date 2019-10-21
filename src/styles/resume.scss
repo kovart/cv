@@ -1,7 +1,13 @@
 @import "variables";
 
 // $main-color: #3a996c;
-$main-color: #40b168;
+// $main-color: #40b168;
+$main-color: #28a755;
+
+:root {
+  --main-color: #{$main-color};
+  --text-color: #333;
+}
 
 *, *:after {
   box-sizing: border-box;
@@ -17,7 +23,7 @@ body {
   padding: 0;
   font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   line-height: 140%;
-  color: #3a3a3a;
+  color: var(--text-color);
   background: #e5e9e9;
   -webkit-print-color-adjust: exact;
 }
@@ -56,7 +62,7 @@ body {
 
 span.highlight {
   font-weight: 500;
-  border-bottom: 1px dotted black;
+  border-bottom: 1px dotted var(--text-color);
 }
 
 section.highlight {
@@ -69,7 +75,7 @@ section.highlight:before {
   height: 100%;
   width: 8px;
   //background: grey;
-  background: $main-color;
+  background: var(--main-color);
 }
 
 .contact-info {
@@ -91,7 +97,7 @@ section.highlight:before {
     padding: 4px;
 
     svg {
-      fill: #333;
+      fill: var(--text-color);
     }
 
     svg, img {
@@ -102,7 +108,7 @@ section.highlight:before {
     margin-left: 0.5rem;
     font-size: 1rem;
     a {
-      color: black;
+      color: var(--text-color);
       text-decoration: none;
       &:hover {
         text-decoration: underline;
@@ -179,9 +185,9 @@ section.highlight:before {
       color: inherit;
       font-weight: 500;
       text-decoration: none;
-      border-bottom: 1px dotted black;
+      border-bottom: 1px dotted var(--text-color);
       &:hover {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid var(--text-color);
       }
     }
   }
@@ -196,7 +202,7 @@ section.highlight:before {
     font-size: 0.9rem;
     padding: 1px 10px;
     color: white;
-    background: $main-color;
+    background: var(--main-color);
     margin-right: 3px;
     margin-bottom: 6px;
     border-radius: 3px;
@@ -214,7 +220,7 @@ section.highlight:before {
   margin-top: 1rem;
   margin-right: 0.6rem;
   border-radius: 4px;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.05);
 
   &:hover {
     border-color: #999;
@@ -229,6 +235,7 @@ section.highlight:before {
     color: white;
     background: $color;
     border-color: transparent;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
 
     &:hover {
       background: darken($color, 3%);
@@ -275,6 +282,11 @@ section.highlight:before {
 }
 
 @media print {
+  :root {
+    --main-color: #22974b;
+    --text-color: #111;
+  }
+
   .project__title {
     a {
       text-decoration: none;
@@ -282,7 +294,7 @@ section.highlight:before {
   }
 
   .goal {
-    font-family: Roboto, sans-serif;
+    font-family: inherit;
   }
 
   .my-photo, .project__tag {
