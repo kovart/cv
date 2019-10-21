@@ -1,6 +1,7 @@
 @import "variables";
 
-$main-color: #3a996c;
+// $main-color: #3a996c;
+$main-color: #40b168;
 
 *, *:after {
   box-sizing: border-box;
@@ -14,8 +15,9 @@ $main-color: #3a996c;
 body {
   margin: 0;
   padding: 0;
-  font-family: Roboto, sans-serif;
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   line-height: 140%;
+  color: #3a3a3a;
   background: #e5e9e9;
   -webkit-print-color-adjust: exact;
 }
@@ -26,7 +28,8 @@ body {
   font-weight: 900;
   margin: 0;
   padding: 0;
-  line-height: 130%;
+  line-height: 1em;
+  margin-bottom: 8px;
 }
 
 .goal {
@@ -37,7 +40,7 @@ body {
   letter-spacing: 0.03em;
   margin-top: 12px;
   margin-bottom: 0;
-  background: #e5e9e9;
+  background: #f5f5f5;
   font-family: monospace;
 }
 
@@ -47,7 +50,8 @@ body {
   display: block;
   height: 180px;
   margin-left: auto;
-  border-radius: 1%;
+  border-radius: 2px;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.1)
 }
 
 span.highlight {
@@ -86,7 +90,11 @@ section.highlight:before {
     width: 26px;
     padding: 4px;
 
-    img {
+    svg {
+      fill: #333;
+    }
+
+    svg, img {
       width: 20px;
     }
   }
@@ -146,7 +154,7 @@ section.highlight:before {
 
     > * {
       display: inline-block;
-      color: black;
+      color: inherit;
     }
 
     h2, h3, h4 {
@@ -155,7 +163,7 @@ section.highlight:before {
     }
 
     a {
-      color: black;
+      color: inherit;
     }
   }
 
@@ -168,7 +176,7 @@ section.highlight:before {
     font-size: 1rem;
 
     a {
-      color: black;
+      color: inherit;
       font-weight: 500;
       text-decoration: none;
       border-bottom: 1px dotted black;
@@ -191,27 +199,29 @@ section.highlight:before {
     background: $main-color;
     margin-right: 3px;
     margin-bottom: 6px;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1), inset 0 0 0 1px rgba(0,0,0,.1)
   }
 }
 
 .button {
-  $color: #444444;
   display: inline-block;
   padding: 10px 16px;
   text-decoration: none;
-  color: $color;
-  border: 1px solid $color;
+  color: #333;
+  background: white;
+  border: 1px solid #dbdbdb;
   margin-top: 1rem;
   margin-right: 0.6rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
 
   &:hover {
-    background: lighten($color, 65%);
-    color: black;
+    border-color: #999;
   }
 
   &:active {
-    background: $color;
-    color: white;
+    background: #f3f3f3;
   }
 
   &--primary {
@@ -221,12 +231,13 @@ section.highlight:before {
     border-color: transparent;
 
     &:hover {
-      background: darken($color, 5%);
+      background: darken($color, 3%);
+      border-color: transparent;
       color: white;
     }
 
     &:active {
-      background: darken($color, 10%);
+      background: darken($color, 6%);
       color: white;
     }
   }
@@ -272,5 +283,9 @@ section.highlight:before {
 
   .goal {
     font-family: Roboto, sans-serif;
+  }
+
+  .my-photo, .project__tag {
+    box-shadow: none !important;
   }
 }

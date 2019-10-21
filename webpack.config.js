@@ -2,6 +2,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin')
 const postcssPresetEnv = require('postcss-preset-env')
 const cssnano = require('cssnano')
 
@@ -59,7 +60,15 @@ const config = {
             inject: true,
             hash: false,
             filename: 'index.html',
-            template: path.resolve(__dirname, 'src', 'index.html')
+            template: path.resolve(__dirname, 'src', 'index.html'),
+            svgoConfig: {
+                removeAttrs: {
+                    attrs: 'fill'
+                }
+            }
+        }),
+        new HtmlWebpackInlineSVGPlugin({
+            runPreEmit: true,
         }),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
