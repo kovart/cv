@@ -250,6 +250,7 @@ section.highlight:before {
   }
 }
 
+
 // MEDIA QUERIES
 // ---------------
 @media print {
@@ -299,5 +300,36 @@ section.highlight:before {
 
   .my-photo, .project__tag {
     box-shadow: none !important;
+  }
+
+  // The next changes are
+  // for making more compact
+
+  .my-photo {
+    height: 160px;
+  }
+
+  h3 {
+    margin: 1rem 0;
+  }
+
+  .section ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .section {
+    margin-top: 20px;
+  }
+
+  .section__title {
+    font-size: 1.45rem;
+  }
+
+  .contact-info {
+    margin-top: 14px;
+  }
+
+  .goal {
+    margin-top: 6px
   }
 }
